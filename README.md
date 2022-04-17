@@ -108,8 +108,81 @@ Med Trac is a medicine reminder app for patients of all ages. The app dispatches
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### Medicine
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | medicationId      | String   | medication name that the user inputs |
+   | frequency         | String| how often a user wants to be notified |
+   | dosage         | Number     | amount of the medication  needed |
+   | timeOfNotification       | DateTime  |date and time of when a user should be reminded to take their medication|
+   | refillNotification | Boolean   | true, if wants refill and false if the user does not |
+   | medicalHistory    | String   | description of relevant medical history/notes a user inputs |
+   
+ #### User
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | userId      | String   | id associated with a user
+
+
 ### Networking
 - [Add list of network requests by screen ]
+- 
+-  Home Feed Screen
+     - (Read/GET) Query all posts where user is author
+         ```swift
+         let query = PFQuery(className:"Medicine")
+         query.whereKey("userId", equalTo: currentUser)
+         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let posts = posts {
+               print("Successfully retrieved \(posts.count) posts.")
+           // TODO: Do something with posts...
+            }
+         }
+         ```
+      - (Create/POST) Create a new reminder on the calendar tracker
+        ```swift
+        let newRemind = PFObject(className:"NewReminders") 
+        newRemind["medicationId"] = "Claritin"
+        newRemind["frequency"] = "Daily"
+        newRemind["dosage"] = 2
+        newRemind["timeOfNotification"] = 2022-04-29 12:24:26
+        newRemind["refillNotification"] = false
+        newRemind.saveInBackground { (succeeded, error)  in
+        if (succeeded) {
+        // The object has been saved.
+        } else {
+        // There was a problem, check error.description
+           // TODO: Do something with posts...
+             }
+        }
+
+    - (Delete) delete an existing reminder
+
+        ```swift
+        PFObject.deleteAll(inBackground: objectArray) { 
+            (succeeded, error) in
+        if (succeeded) {
+        // The array of objects was successfully deleted.
+        } else {
+        // There was an error. Check the errors localizedDescription.
+        }
+            }
+
+        
+
+ 
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+-  Network Request Outline - []()
+
+   Screen | CRUD | HTTP Verb | Description
+   ----------|----------|------| ------------
+    Home screen  |  Create, Read| `POST`, `GET` | Creating a new medication reminder if 'add medication' is tapped; Fetching information from a user's medication card if 'medicine card' is tapped
+   Profile screen   | Read, Update| `GET`, `PUT` | Query logged in user object; update user profile image
+    Medical glossary    |Read |`GET` | Fetching endpoint from our API that provides medical terminology a user searches for  
+    Find medication near you | Read | `GET` | Fetching endpoint from our API that locates nearby pharmacies offering requested medication
+    Settings   | Delete| `DELETE` |  Deletes user account/ user data upon user's request
+   
