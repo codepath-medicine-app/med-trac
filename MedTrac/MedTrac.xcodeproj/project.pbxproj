@@ -21,6 +21,8 @@
 		0C8B81BB280F720F00CD936A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8B81BA280F720F00CD936A /* Login.storyboard */; };
 		0C8B81BD280F723800CD936A /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8B81BC280F723800CD936A /* Calendar.storyboard */; };
 		0C8B81BF280F728C00CD936A /* Reminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8B81BE280F728C00CD936A /* Reminder.storyboard */; };
+		0CADE78E281B325D00C19823 /* MedicationCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CADE78D281B325D00C19823 /* MedicationCard.storyboard */; };
+		0CADE792281F69E400C19823 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CADE791281F69E400C19823 /* CardTableViewCell.swift */; };
 		A8B4824628175577004A38CD /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8B4824528175577004A38CD /* Profile.storyboard */; };
 		A8B48248281755A5004A38CD /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8B48247281755A5004A38CD /* Settings.storyboard */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		0C8B81BA280F720F00CD936A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0C8B81BC280F723800CD936A /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		0C8B81BE280F728C00CD936A /* Reminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reminder.storyboard; sourceTree = "<group>"; };
+		0CADE78D281B325D00C19823 /* MedicationCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MedicationCard.storyboard; sourceTree = "<group>"; };
+		0CADE791281F69E400C19823 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		A8B4824528175577004A38CD /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		A8B48247281755A5004A38CD /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +131,8 @@
 				A8B48247281755A5004A38CD /* Settings.storyboard */,
 				0C3F649F28176CC7003F7601 /* LoginViewController.swift */,
 				0C3F64A128176CDE003F7601 /* CalendarViewController.swift */,
+				0CADE78D281B325D00C19823 /* MedicationCard.storyboard */,
+				0CADE791281F69E400C19823 /* CardTableViewCell.swift */,
 			);
 			path = MedTrac;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CADE78E281B325D00C19823 /* MedicationCard.storyboard in Resources */,
 				0C8B81BB280F720F00CD936A /* Login.storyboard in Resources */,
 				0C8B8197280F71F600CD936A /* LaunchScreen.storyboard in Resources */,
 				0C8B81BF280F728C00CD936A /* Reminder.storyboard in Resources */,
@@ -285,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3F64A228176CDE003F7601 /* CalendarViewController.swift in Sources */,
+				0CADE792281F69E400C19823 /* CardTableViewCell.swift in Sources */,
 				0C3F64A028176CC7003F7601 /* LoginViewController.swift in Sources */,
 				0C8B818F280F71F400CD936A /* ViewController.swift in Sources */,
 				0C8B818B280F71F400CD936A /* AppDelegate.swift in Sources */,

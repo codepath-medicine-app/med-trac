@@ -16,21 +16,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idI-CV-3Z4">
-                                <rect key="frame" x="186" y="186" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FU5-4G-Ork">
+                                <rect key="frame" x="15" y="816" width="125" height="31"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Medication"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NR-77-WEi">
+                                <rect key="frame" x="269" y="816" width="130" height="31"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Medication Card"/>
+                                <connections>
+                                    <segue destination="A5E-if-yrO" kind="show" id="ykF-kL-Z4M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsi-v3-ZSD">
+                                <rect key="frame" x="174" y="816" width="66" height="31"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Profile"/>
+                                <connections>
+                                    <segue destination="3Ag-NA-IYb" kind="show" id="vCr-GU-mg1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6NR-77-WEi" secondAttribute="bottom" constant="15" id="4aN-YP-2Br"/>
+                            <constraint firstItem="6NR-77-WEi" firstAttribute="leading" secondItem="Gsi-v3-ZSD" secondAttribute="trailing" constant="29" id="Odi-0q-s6v"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6NR-77-WEi" secondAttribute="trailing" constant="15" id="agn-Jc-f75"/>
+                            <constraint firstItem="FU5-4G-Ork" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="i4i-RD-u6r"/>
+                            <constraint firstItem="Gsi-v3-ZSD" firstAttribute="leading" secondItem="FU5-4G-Ork" secondAttribute="trailing" constant="34" id="rDO-Nu-mgt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FU5-4G-Ork" secondAttribute="bottom" constant="15" id="yFa-FG-Db8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Gsi-v3-ZSD" secondAttribute="bottom" constant="15" id="zqt-C9-qT4"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="98"/>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+        <!--MedicationCard-->
+        <scene sceneID="EWt-m5-ZAN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MedicationCard" referencedIdentifier="MedicationCard" id="A5E-if-yrO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="PVA-bQ-oix"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWH-54-zZl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="195"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="eUz-n8-mag">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="Profile" id="3Ag-NA-IYb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lSf-6d-RAd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHB-1Y-AjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="129"/>
         </scene>
     </scenes>
     <resources>
